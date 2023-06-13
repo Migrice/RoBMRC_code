@@ -7,7 +7,7 @@ import torch
 from torch.nn import functional as F
 from transformers import AdamW, get_linear_schedule_with_warmup
 import DatasetCapsulation as Data
-from tools import Utils, Model
+import Utils, Model
 from transformers import BertTokenizer
 
 dataset_version = "v2/"
@@ -636,7 +636,7 @@ if __name__ == '__main__':
     parser.add_argument('--inference_beta', type=float, default=0.90)
 
     # training hyper-parameter
-    parser.add_argument('--gpu', type=bool, default=True)
+    parser.add_argument('--gpu', type=bool, default=False)
     parser.add_argument('--epoch_num', type=int, default=50)
     parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--learning_rate', type=float, default=1e-3)
