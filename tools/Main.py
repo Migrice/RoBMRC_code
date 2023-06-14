@@ -616,7 +616,7 @@ def train(arguments):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Bidirectional MRC-based sentiment triplet extraction')
-    parser.add_argument('--data_path', type=str, default="../data/preprocess/" + dataset_version)
+    parser.add_argument('--data_path', type=str, default="./data/preprocess/" + dataset_version)
     parser.add_argument('--data_name', type=str, default=dataset_name_list[0], choices=dataset_name_list)
     parser.add_argument('--log_path', type=str, default="../log/")
     parser.add_argument('--save_model_path', type=str, default="../model/")
